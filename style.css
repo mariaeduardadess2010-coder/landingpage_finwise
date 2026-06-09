@@ -862,3 +862,256 @@ p {
         transform: scale(1);
     }
 }
+/* ============================================
+   MODO NOTURNO - TOGGLE
+   ============================================ */
+
+/* Botão de alternar modo noturno */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--white);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    color: var(--gray-800);
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+.dark-mode-toggle i {
+    transition: all 0.3s ease;
+}
+
+/* Modo Noturno - Cores principais */
+body.dark-mode {
+    background-color: #0a0a0a;
+    color: #e5e5e5;
+}
+
+body.dark-mode .navbar {
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: #0a0a0a;
+}
+
+body.dark-mode .nav-links a {
+    color: #d1d5db;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: var(--green-500);
+}
+
+body.dark-mode .mobile-menu {
+    background: #0f0f0f;
+}
+
+body.dark-mode .mobile-menu a {
+    color: #d1d5db;
+}
+
+/* Hero Section */
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #0f0f0f 0%, #0a0a0a 100%);
+}
+
+body.dark-mode .hero::before {
+    background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent);
+}
+
+body.dark-mode .hero-badge {
+    background: rgba(16, 185, 129, 0.15);
+}
+
+body.dark-mode .hero-content p {
+    color: #9ca3af;
+}
+
+body.dark-mode .trust-item {
+    color: #9ca3af;
+}
+
+/* Dashboard Preview */
+body.dark-mode .dashboard-preview {
+    background: #1a1a1a;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .dashboard-card {
+    background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+/* Features Cards */
+body.dark-mode .feature-card {
+    background: #111111;
+    border-color: #1f1f1f;
+}
+
+body.dark-mode .feature-card:hover {
+    border-color: var(--green-500);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .feature-card p {
+    color: #9ca3af;
+}
+
+body.dark-mode .feature-icon {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+}
+
+/* Advantages Section */
+body.dark-mode .advantages {
+    background: #0d0d0d;
+}
+
+body.dark-mode .advantage-item {
+    background: #111111;
+    border-color: #1f1f1f;
+}
+
+body.dark-mode .advantage-item:hover {
+    border-color: var(--green-500);
+}
+
+body.dark-mode .advantage-item p {
+    color: #9ca3af;
+}
+
+body.dark-mode .advantage-icon {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+}
+
+/* Stats Section - mantém o verde original */
+body.dark-mode .stats {
+    background: linear-gradient(135deg, var(--green-700), var(--green-800));
+}
+
+/* Plans Section */
+body.dark-mode .plans {
+    background: #0d0d0d;
+}
+
+body.dark-mode .plan-card {
+    background: #111111;
+    border-color: #1f1f1f;
+}
+
+body.dark-mode .plan-card.featured {
+    background: linear-gradient(135deg, #111111, rgba(16, 185, 129, 0.05));
+    border-color: var(--gold-500);
+}
+
+body.dark-mode .plan-card h3 {
+    color: #e5e5e5;
+}
+
+body.dark-mode .price {
+    color: #e5e5e5;
+}
+
+body.dark-mode .plan-badge {
+    background: #1f1f1f;
+    color: #9ca3af;
+}
+
+body.dark-mode .plan-features li {
+    color: #d1d5db;
+}
+
+/* CTA Section */
+body.dark-mode .cta {
+    background: linear-gradient(135deg, #0a0a0a, #050505);
+}
+
+body.dark-mode .cta::before {
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.08), transparent);
+}
+
+body.dark-mode .cta-content p {
+    color: #9ca3af;
+}
+
+body.dark-mode .store-btn {
+    background: #1f1f1f;
+    color: #e5e5e5;
+}
+
+body.dark-mode .store-btn:hover {
+    background: var(--green-500);
+    color: white;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background: #050505;
+}
+
+body.dark-mode .footer-col ul li a {
+    color: #9ca3af;
+}
+
+body.dark-mode .footer-col ul li a:hover {
+    color: var(--green-500);
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Títulos no modo noturno */
+body.dark-mode .section-header p {
+    color: #9ca3af;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #e5e5e5;
+}
+
+body.dark-mode .green-text,
+body.dark-mode .gold-text {
+    color: var(--green-500);
+}
+
+body.dark-mode .gold-text {
+    color: var(--gold-500);
+}
+
+/* Menu mobile noturno */
+body.dark-mode .mobile-menu {
+    background: #0f0f0f;
+    border-top: 1px solid #1f1f1f;
+}
+
+/* Botão toggle no modo noturno */
+body.dark-mode .dark-mode-toggle {
+    background: #1f1f1f;
+    color: #fbbf24;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background: var(--green-500);
+    color: white;
+}
